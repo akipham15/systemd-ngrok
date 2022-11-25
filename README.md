@@ -8,4 +8,4 @@
 
 ## Acknowledgements
 
-Ngrok architecture auto detection was contributed by [David Eleazar](https://github.com/elzdave).
+..
