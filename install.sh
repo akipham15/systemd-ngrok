@@ -44,11 +44,12 @@ if [ -z "$1" ]; then
 fi
 
 if [ ! -e ngrok.service ]; then
-    git clone --depth=1 https://github.com/vincenthsu/systemd-ngrok.git
+    git clone --depth=1 https://github.com/akipham15/systemd-ngrok.git
     cd systemd-ngrok
 fi
 
 cp ngrok.service /lib/systemd/system/
+touch /var/log/ngrok.log
 mkdir -p /opt/ngrok
 cp ngrok.yml /opt/ngrok
 sed -i "s/<add_your_token_here>/$1/g" /opt/ngrok/ngrok.yml

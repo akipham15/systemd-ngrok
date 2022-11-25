@@ -10,6 +10,7 @@ IgnoreSIGPIPE=true
 Restart=always
 RestartSec=3
 Type=simple
+StandardOutput=file:/var/log/ngrok.log
 
 [Install]
 WantedBy=multi-user.target
